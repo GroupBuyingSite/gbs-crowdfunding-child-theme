@@ -112,9 +112,8 @@
 								<?php
 								$voucher = Group_Buying_Voucher::get_instance( get_the_ID() );
 								$purchase_id = $voucher->get_purchase_id();
-								$path = Group_Buying_Purchase::REWRITE_SLUG . '/order-' . $purchase_id;
 								?>
-								<a href="<?php echo site_url( $path ); ?>" class="alt_button"><?php gb_e('View') ?></a>
+								<a href="<?php echo get_permalink( $purchase_id ); ?>" class="alt_button"><?php gb_e('View') ?></a>
 							</td>
 							</td>
 							<td class="td_expires">
